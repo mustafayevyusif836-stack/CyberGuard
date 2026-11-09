@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Lookup | CyberGuard</title>
+    <link rel="stylesheet" href="ip-lookup.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Cyber<span>Guard</span></a>
+        <a href="dashboard.html" class="back-link">← Dashboard</a>
+    </header>
+
+    <main class="container">
+        <div class="heading">
+            <span class="tag">CYBERGUARD SECURITY TOOLS</span>
+            <h1>IP <span>Lookup</span></h1>
+            <p>Find public IP address information and network details.</p>
+        </div>
+
+        <section class="search-box">
+            <label for="ipInput">IP Address</label>
+            <div class="search-row">
+                <input
+                    type="text"
+                    id="ipInput"
+                    placeholder="Example: 8.8.8.8"
+                    autocomplete="off"
+                >
+                <button id="lookupBtn">Analyze IP</button>
+            </div>
+            <p class="hint">Enter a public IPv4 or IPv6 address.</p>
+            <p id="message"></p>
+        </section>
+
+        <section class="results" id="results">
+            <div class="result-header">
+                <div>
+                    <span class="tag">ANALYSIS RESULT</span>
+                    <h2 id="resultIP">IP Information</h2>
+                </div>
+                <span class="status" id="resultStatus">Ready</span>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <span>IP VERSION</span>
+                    <h3 id="ipType">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>COUNTRY</span>
+                    <h3 id="country">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>REGION</span>
+                    <h3 id="region">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>CITY</span>
+                    <h3 id="city">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>ISP</span>
+                    <h3 id="isp">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>ORGANIZATION</span>
+                    <h3 id="org">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>ASN</span>
+                    <h3 id="asn">—</h3>
+                </div>
+                <div class="info-card">
+                    <span>TIMEZONE</span>
+                    <h3 id="timezone">—</h3>
+                </div>
+            </div>
+
+            <p class="disclaimer">
+                IP geolocation is approximate and does not identify a person's
+                exact home or physical location.
+            </p>
+        </section>
+    </main>
+
+    <script src="ip-lookup.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard | Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="/" class="brand">
+            <span>CYBER</span>GUARD
+        </a>
+
+        <div class="menu-label">MAIN MENU</div>
+
+        <nav class="side-nav">
+            <a href="dashboard.html" class="active">▦ Dashboard</a>
+            <a href="#scanner">⌕ Security Scanner</a>
+            <a href="#network">◎ IP Information</a>
+            <a href="#threats">◈ Threat Intelligence</a>
+            <a href="#activity">◷ Activity Logs</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user-card">
+                <div class="avatar">CG</div>
+                <div>
+                    <strong>CyberGuard User</strong>
+                    <small>Free Account</small>
+                </div>
+            </div>
+            <a href="/" class="back-link">← Back to Website</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Welcome to your security workspace.</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-online">
+                    <span class="green-dot"></span>
+                    System Online
+                </span>
+                <div class="top-avatar">CG</div>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <span class="eyebrow">SECURITY OVERVIEW</span>
+                <h1>Welcome to CyberGuard.</h1>
+                <p>Monitor your security environment from one place.</p>
+            </div>
+            <div class="date-box">
+                <span>LOCAL TIME</span>
+                <strong id="clock">--:--:--</strong>
+            </div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>SERVER STATUS</span>
+                    <span class="stat-icon">◉</span>
+                </div>
+                <h2 id="server-status">Checking...</h2>
+                <p>Backend connection</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>PLATFORM VERSION</span>
+                    <span class="stat-icon">⌘</span>
+                </div>
+                <h2>1.0.0</h2>
+                <p>Current release</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>ACTIVE TOOLS</span>
+                    <span class="stat-icon">⚡</span>
+                </div>
+                <h2>03</h2>
+                <p>Available modules</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>ACCOUNT TYPE</span>
+                    <span class="stat-icon">♙</span>
+                </div>
+                <h2>FREE</h2>
+                <p>Standard access</p>
+            </div>
+
+        </section>
+
+        <!-- MAIN GRID -->
+        <section class="content-grid">
+
+            <div class="panel system-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>System Health</h3>
+                        <p>Current platform availability</p>
+                    </div>
+                    <span class="live-badge">LIVE</span>
+                </div>
+
+                <div class="health-content">
+                    <div class="health-circle">
+                        <div>
+                            <strong>OK</strong>
+                            <small>STATUS</small>
+                        </div>
+                    </div>
+
+                    <div class="health-info">
+                        <h3>Platform Operational</h3>
+                        <p>CyberGuard backend is responding.</p>
+                        <div class="health-row">
+                            <span>API Connection</span>
+                            <strong id="api-health">Checking...</strong>
+                        </div>
+                        <div class="health-row">
+                            <span>Platform</span>
+                            <strong>Active</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel activity-panel" id="activity">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Recent Activity</h3>
+                        <p>Latest platform events</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <span class="activity-icon blue">↗</span>
+                    <div>
+                        <strong>Dashboard opened</strong>
+                        <small>Current session</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <span class="activity-icon green">✓</span>
+                    <div>
+                        <strong>API initialized</strong>
+                        <small>Platform connection</small>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <span class="activity-icon purple">◈</span>
+                    <div>
+                        <strong>CyberGuard started</strong>
+                        <small>Version 1.0.0</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECURITY TOOLS -->
+        <section class="panel tools-panel">
+            <div class="panel-heading">
+                <div>
+                    <h3>Security Tools</h3>
+                    <p>Explore available platform modules</p>
+                </div>
+            </div>
+
+            <div class="tools-grid">
+
+                <a href="#scanner" class="tool-card" id="scanner">
+                    <span class="tool-icon">⌕</span>
+                    <h3>Security Scanner</h3>
+                    <p>Analyze authorized systems.</p>
+                    <span class="tool-link">Explore tool →</span>
+                </a>
+
+                <a href="#network" class="tool-card" id="network">
+                    <span class="tool-icon">◎</span>
+                    <h3>IP Information</h3>
+                    <p>Explore public network information.</p>
+                    <span class="tool-link">Explore tool →</span>
+                </a>
+
+                <a href="#threats" class="tool-card" id="threats">
+                    <span class="tool-icon">◈</span>
+                    <h3>Threat Intelligence</h3>
+                    <p>Learn about security threats.</p>
+                    <span class="tool-link">Explore tool →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <footer>
+            CyberGuard © 2026 · Security Platform
+            <span>Version 1.0.0</span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

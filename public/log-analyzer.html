@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Analyzer | CyberGuard</title>
+    <link rel="stylesheet" href="log-analyzer.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Cyber<span>Guard</span></a>
+    <a href="dashboard.html" class="back-link">← Dashboard</a>
+</header>
+
+<main class="container">
+
+    <section class="heading">
+        <span class="tag">SECURITY LOG INTELLIGENCE</span>
+        <h1>Log <span>Analyzer</span></h1>
+        <p>Analyze log files and identify important events.</p>
+    </section>
+
+    <section class="upload-box">
+        <h2>Upload Log File</h2>
+        <p>Select a text-based log file (.log or .txt).</p>
+
+        <input type="file" id="logFile" accept=".log,.txt">
+
+        <button id="analyzeBtn">Analyze Logs</button>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="statistics">
+        <div class="stat-card">
+            <span>TOTAL EVENTS</span>
+            <h2 id="totalCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>INFO</span>
+            <h2 id="infoCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>WARNING</span>
+            <h2 id="warningCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>ERROR / CRITICAL</span>
+            <h2 id="errorCount">0</h2>
+        </div>
+    </section>
+
+    <section class="log-results">
+        <div class="results-heading">
+            <h2>Analysis Results</h2>
+            <button id="clearBtn">Clear</button>
+        </div>
+
+        <div id="logOutput">
+            <p class="empty">Upload a log file to begin analysis.</p>
+        </div>
+    </section>
+
+    <p class="notice">
+        Files are processed locally in your browser.
+        Do not upload logs containing passwords, tokens or private information.
+    </p>
+
+</main>
+
+<script src="log-analyzer.js"></script>
+</body>
+</html>
